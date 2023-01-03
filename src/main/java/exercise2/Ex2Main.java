@@ -29,8 +29,8 @@ public class Ex2Main {
                     new AbstractBPlusTree.Entry(29, new ValueReference(9))
                 },
                 new AbstractBPlusTree.Entry[]{
-                    new AbstractBPlusTree.Entry(31, new ValueReference(10)),
-                    new AbstractBPlusTree.Entry(37, new ValueReference(11)),
+                    new AbstractBPlusTree.Entry(37, new ValueReference(10)),
+                    new AbstractBPlusTree.Entry(31, new ValueReference(11)),
                     new AbstractBPlusTree.Entry(41, new ValueReference(12))
                 },
                 new AbstractBPlusTree.Entry[]{
@@ -43,11 +43,16 @@ public class Ex2Main {
 
         AbstractBPlusTree tree = new BPlusTreeJava(root);
         System.out.println(tree);
+        System.out.println(tree.isValid());
 
-        LeafNode leafNode = new LeafNode(4);
-        System.out.println(leafNode);
-        InnerNode innerNode = new InnerNode(4);
+        LeafNode leafNode1 = new LeafNode(4, new AbstractBPlusTree.Entry(43, new ValueReference(13)), new AbstractBPlusTree.Entry(44, new ValueReference(13)));
+        LeafNode leafNode2 = new LeafNode(4, new AbstractBPlusTree.Entry(46, new ValueReference(13)), new AbstractBPlusTree.Entry(47, new ValueReference(13)));
+
+        InnerNode innerNode = new InnerNode(4, leafNode1, leafNode2);
+        System.out.println(innerNode.isValid());
         System.out.println(innerNode);
+
+        //LeafNode leafNode3 = new LeafNode()
 
         /*
          * playground

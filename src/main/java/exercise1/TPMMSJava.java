@@ -79,12 +79,10 @@ public class TPMMSJava extends SortOperation {
             for (int i = 0; i < blockIterList.size(); i++) {
                 if (topTuples[i] == null) {
                     continue;
-                }
-                if (minTuple == null) {
+                } else if (minTuple == null) {
                     minTuple = topTuples[i];
                     minTupleIndex = i;
-                }
-                if (relation.getColumns().getColumnComparator(getSortColumnIndex()).compare(topTuples[i], minTuple) < 0) {
+                } else if (relation.getColumns().getColumnComparator(getSortColumnIndex()).compare(topTuples[i], minTuple) < 0) {
                     minTuple = topTuples[i];
                     minTupleIndex = i;
                 }
