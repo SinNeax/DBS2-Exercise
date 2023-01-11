@@ -33,7 +33,7 @@ public class Ex1Main {
 		Relation outputRelation = dbms.createRelation(dbms.getBlockManager(), columnDefinition);
 
 		final int sortColumnIndex = 0;
-		SortOperation sortOperation = new TPMMSJava(dbms.getBlockManager(), sortColumnIndex);
+		//SortOperation sortOperation = new TPMMSJava(dbms.getBlockManager(), sortColumnIndex);
 
 		// sortOperation.execute(inputRelation, outputRelation);
 

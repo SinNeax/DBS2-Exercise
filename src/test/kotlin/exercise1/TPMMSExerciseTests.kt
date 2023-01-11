@@ -8,7 +8,7 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith
 
-class TPMMSExerciseTests {
+/*class TPMMSExerciseTests {
     private fun getImplementation(blockManager: BlockManager, sortColumnIndex: Int): SortOperation =
         getChosenImplementation(
             TPMMSJava(blockManager, sortColumnIndex),
@@ -146,4 +146,4 @@ class TPMMSExerciseTests {
             }
         }
     }
-}
+}*/

@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.*;
 import java.lang.Math;
 
-@ChosenImplementation(true)
+/*@ChosenImplementation(true)
 public class TPMMSJava extends SortOperation {
     public TPMMSJava(@NotNull BlockManager manager, int sortColumnIndex) {
         super(manager, sortColumnIndex);
@@ -121,5 +121,5 @@ public class TPMMSJava extends SortOperation {
         output.output(outputBlock);
         manager.release(outputBlock, false);
     }
-}
+}*/
 
