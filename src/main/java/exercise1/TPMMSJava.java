@@ -17,7 +17,9 @@ public class TPMMSJava extends SortOperation {
 
     @Override
     public int estimatedIOCost(@NotNull Relation relation) {
-        throw new UnsupportedOperationException("TODO");
+        // we assume that writing into output doesn't mean conducting an I/O Operation
+        // there's the possibility to hand over the sorted relation to another operator
+        return relation.getEstimatedSize() * 3;
     }
 
     private void loadNextBlockInMemory(LinkedList<Iterator<Block>> blockIterList, Block[] memory, Iterator<Tuple>[] memoryTupleIter, Tuple[] topTuples, int index) {
